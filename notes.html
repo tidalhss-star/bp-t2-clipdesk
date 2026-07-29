@@ -3,22 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="bpaas-design-system" content="editorial-apple">
-    <meta name="bpaas-design-theme" content="kr-journal-cream">
-    <title>메모 정리 방법론: 효율적인 지식 아카이빙을 위한 용어 및 분류 기준</title>
-    <meta name="description" content="수집된 임시 메모를 체계적인 지식 자산으로 전환하기 위한 정량적 분류 기준과 전문 용어 정의 및 상황별 아카이빙 시스템 가이드를 제공합니다.">
-    <meta name="keywords" content="기록 정리 방법, 정보 아카이빙, 효율적 기록, 디지털 정리, 정보 관리, 메모 분류">
+    <title>메모 — 당신이 매일 적는 쓰레기 더미에서 보석을 건지는 기준</title>
+    <meta name="description" content="단순히 받아적기만 하는 메모는 쓰레기 양산일 뿐입니다. 기록의 어긋남을 극복하고, 진짜 쓸모 있는 자산으로 남기기 위한 실전 기록 정리 방법과 핵심 용어 및 상황별 분류 기준 스니펫을 제안합니다.">
+    <meta name="keywords" content="기록 정리 방법, 정보 정리, 아카이빙, 메모법, 지식 관리, 노션 정리, 개인 데이터">
     <link rel="canonical" href="https://clipdesk.shop/notes.html">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-clip-oxide">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="메모 — 쓸모없는 기록을 멈추고 자산을 남기는 방법">
+    <meta property="og:description" content="받아적기만 하는 메모는 지식의 묘지입니다. 철저한 기준과 날카로운 분류 스니펫으로 나중에 반드시 꺼내 쓰는 완벽한 기록 정리 방법을 확립하세요.">
+    <meta property="og:url" content="https://clipdesk.shop/notes.html">
+
     <style>
+        /* Design System: kr-clip-oxide (Brutalist Avantgarde) */
         :root {
-            --bg-color: #fbfaf7;
-            --text-color: #242220;
-            --text-muted: #6e675f;
-            --accent-color: #8c7e6c;
-            --border-color: #ebd9c8;
-            --card-bg: #ffffff;
-            --font-serif: "Georgia", "Times New Roman", "Noto Serif KR", serif;
-            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans KR", sans-serif;
+            --bg-color: #121212;
+            --text-color: #f4f4f0;
+            --accent-color: #ff4500; /* Oxide Red-Orange */
+            --grid-color: #333333;
+            --card-bg: #1e1e1e;
+            --border-width: 2px;
+            --font-mono: 'Courier New', Courier, monospace;
         }
 
         * {
@@ -30,317 +37,498 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
-            font-family: var(--font-sans);
-            line-height: 1.75;
-            letter-spacing: -0.01em;
-            padding: 0;
-            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        /* Header & Navigation */
-        .n-wrap-yohz-wrap {
-            max-width: 68rem;
-            margin: 0 auto;
-            padding: 4rem 2rem 2rem 2rem;
-            border-bottom: 1px solid var(--border-color);
+        /* Sticky Header */
+        .r-head-o4fq-wrapper {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: var(--bg-color);
+            border-bottom: var(--border-width) solid var(--accent-color);
         }
 
-        .n-wrap-yohz-wrap h1 {
-            font-family: var(--font-serif);
-            font-size: 2.8rem;
-            font-weight: 700;
-            line-height: 1.2;
-            color: var(--text-color);
-            margin-bottom: 1rem;
-            letter-spacing: -0.03em;
-        }
-
-        .n-wrap-yohz-wrap p {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            font-family: var(--font-serif);
-            font-style: italic;
-            max-width: 42rem;
-        }
-
-        nav {
-            max-width: 68rem;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            gap: 1.5rem;
-            font-size: 0.9rem;
-            font-weight: 600;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        nav a {
-            color: var(--text-muted);
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        nav a:hover, nav a.active {
-            color: var(--accent-color);
-        }
-
-        /* Main Grid Layout */
-        .k-wrap-np1o {
-            max-width: 68rem;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 4rem;
-        }
-
-        /* Content Area */
-        .t-item-kab8 {
-            display: flex;
-            flex-direction: column;
-            gap: 3.5rem;
-        }
-
-        .t-item-kab8 section {
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-        }
-
-        .t-item-kab8 h2 {
-            font-family: var(--font-serif);
-            font-size: 1.8rem;
-            color: var(--text-color);
-            border-bottom: 2px solid var(--text-color);
-            padding-bottom: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .t-item-kab8 p {
-            font-size: 1.05rem;
-            color: var(--text-color);
-            text-align: justify;
-        }
-
-        /* Sidebar Area */
-        .t-side-weuc {
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-        }
-
-        .sidebar-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            padding: 2rem;
-            border-radius: 4px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
-        }
-
-        .sidebar-card h3 {
-            font-family: var(--font-serif);
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            color: var(--text-color);
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 0.5rem;
-        }
-
-        .sidebar-card ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .sidebar-card li {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: 0.8rem;
-            line-height: 1.5;
-        }
-
-        .sidebar-card li strong {
-            color: var(--text-color);
-            display: block;
-            margin-bottom: 0.2rem;
-        }
-
-        /* Snippet / Icon elements */
-        .v-ico-0xlt {
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            background-color: var(--accent-color);
-            border-radius: 50%;
-            margin-right: 8px;
-        }
-
-        .v-ico-fc2b {
-            background-color: #f0ede6;
-            border-left: 4px solid var(--accent-color);
-            padding: 1.2rem;
-            font-family: var(--font-serif);
-            font-style: italic;
-            margin: 1.5rem 0;
-            color: var(--text-muted);
-        }
-
-        /* FAQ Section styling */
-        .faq-item {
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .faq-item h3 {
-            font-size: 1.15rem;
-            font-weight: 700;
-            margin-bottom: 0.6rem;
-            color: var(--text-color);
-        }
-
-        /* Footer */
-        footer {
-            max-width: 68rem;
-            margin: 4rem auto 0 auto;
-            padding: 3rem 2rem;
-            border-top: 1px solid var(--border-color);
-            font-size: 0.85rem;
-            color: var(--text-muted);
+        .r-head-o4fq-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
         }
 
-        @media (max-width: 48rem) {
-            .k-wrap-np1o {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
+        .r-head-o4fq-logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            text-decoration: none;
+            letter-spacing: -1px;
+            font-family: var(--font-mono);
+        }
 
-            .n-wrap-yohz-wrap h1 {
-                font-size: 2.2rem;
-            }
+        .r-head-o4fq-list {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
 
-            footer {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
+        .r-head-o4fq-list a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: color 0.2s ease;
+        }
+
+        .r-head-o4fq-list a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero / Intro Section */
+        .intro-hero {
+            border-bottom: var(--border-width) solid var(--grid-color);
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, #181818 0%, #121212 100%);
+        }
+
+        .intro-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .intro-tag {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            font-weight: 900;
+            padding: 0.3rem 0.8rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            font-family: var(--font-mono);
+        }
+
+        .intro-title {
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -2px;
+            margin-bottom: 2rem;
+        }
+
+        .intro-desc {
+            max-width: 800px;
+            font-size: 1.15rem;
+            color: #b0b0b0;
+            margin-bottom: 1.5rem;
+        }
+
+        .intro-desc strong {
+            color: var(--text-color);
+        }
+
+        /* Brutalist Grid Section */
+        .grid-section {
+            padding: 5rem 2rem;
+            border-bottom: var(--border-width) solid var(--grid-color);
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            margin-bottom: 3.5rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 1.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .section-header p {
+            color: #888;
+            margin-top: 0.5rem;
+            font-size: 1rem;
+        }
+
+        /* Clip Grid Layout */
+        .clip-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .grid-card {
+            background-color: var(--card-bg);
+            border: var(--border-width) solid var(--grid-color);
+            padding: 2.5rem;
+            position: relative;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .grid-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-color);
+        }
+
+        .card-num {
+            font-family: var(--font-mono);
+            font-size: 3rem;
+            font-weight: 900;
+            color: rgba(255, 69, 0, 0.15);
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 1.2rem;
+            color: var(--text-color);
+            border-bottom: 1px solid var(--grid-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .card-text {
+            color: #b0b0b0;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Criteria Detail Section */
+        .criteria-section {
+            background-color: #161616;
+            padding: 5rem 2rem;
+            border-bottom: var(--border-width) solid var(--grid-color);
+        }
+
+        .criteria-flex {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .criteria-block {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            border-top: 1px solid var(--grid-color);
+            padding-top: 2rem;
+        }
+
+        @media(min-width: 768px) {
+            .criteria-block {
+                grid-template-columns: 300px 1fr;
+            }
+        }
+
+        .criteria-label {
+            font-family: var(--font-mono);
+            font-size: 1.2rem;
+            font-weight: 900;
+            color: var(--accent-color);
+            text-transform: uppercase;
+        }
+
+        .criteria-content h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .criteria-content p {
+            color: #c0c0c0;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 5rem 2rem;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media(min-width: 768px) {
+            .faq-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .faq-item {
+            border: var(--border-width) solid var(--grid-color);
+            padding: 2rem;
+            background-color: var(--bg-color);
+        }
+
+        .faq-question {
+            font-size: 1.15rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .faq-answer {
+            color: #b0b0b0;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        .k-foot-vnb5 {
+            border-top: var(--border-width) solid var(--accent-color);
+            background-color: #0d0d0d;
+            padding: 4rem 2rem;
+        }
+
+        .t-foot-dcgk {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        @media(min-width: 768px) {
+            .t-foot-dcgk {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        .footer-logo {
+            font-family: var(--font-mono);
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: var(--text-color);
+            text-transform: uppercase;
+        }
+
+        .footer-copy {
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Utilities */
+        @media(max-width: 768px) {
+            .r-head-o4fq-list {
+                display: none; /* Hamburger or hidden on mobile for simplification */
             }
         }
     </style>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "headline": "메모 정리 방법론: 효율적인 지식 아카이빙을 위한 용어 및 분류 기준",
-      "description": "수집된 임시 메모를 체계적인 지식 자산으로 전환하기 위한 정량적 분류 기준과 전문 용어 정의 및 상황별 아카이빙 시스템 가이드를 제공합니다.",
-      "url": "https://clipdesk.shop",
-      "inLanguage": "ko-KR",
-      "publisher": {
-        "@type": "Organization",
-        "name": "지식 아카이빙 연구소"
-      }
-    }
-    </script>
-  <meta property="og:url" content="https://clipdesk.shop/notes.html">
 </head>
 <body>
 
-    <header class="n-wrap-yohz-wrap">
-        <h1>기록 정리 방법론</h1>
-        <p>수집된 생각의 파편을 가치 있는 영구적 지적 자산으로 전환하기 위한 체계적인 아카이빙 프로토콜과 용어 사전.</p>
+    <!-- Sticky Header -->
+    <header class="r-head-o4fq-wrapper">
+        <div class="r-head-o4fq-container">
+            <a href="/" class="r-head-o4fq-logo">CLIP DESK</a>
+            <nav>
+                <ul class="r-head-o4fq-list">
+                    <li><a href="/archive">아카이브</a></li>
+                    <li><a href="/memo">메모 정리법</a></li>
+                    <li><a href="/framework">프레임워크</a></li>
+                    <li><a href="/about">철학</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <nav>
-        <a href="https://clipdesk.shop" class="active">메모 정리 방법</a>
-        <a href="https://clipdesk.shop/framework">정리 프레임워크</a>
-        <a href="https://clipdesk.shop/tools">디지털 도구 가이드</a>
-        <a href="https://clipdesk.shop/about">연구소 소개</a>
-    </nav>
-
-    <main class="k-wrap-np1o">
-        <article class="t-item-kab8">
-            
-            <section>
-                <h2>1. 메모 정리의 핵심 용어 정의</h2>
-                <p>현대 지식 정보 사회에서 메모는 단순히 일시적인 기억을 보존하는 보조 수단을 넘어, 고도의 지적 자산을 구성하는 원천 데이터로 기능합니다. 시스템적으로 작동하는 기록 체계를 구축하기 위해서는 가장 먼저 메모의 상태를 정의하는 표준 용어를 확립해야 합니다. <strong>원시 메모(Raw Memo)</strong>는 가공되지 않은 상태의 날것 그대로의 아이디어나 일상 속에서 급히 포착한 텍스트, 음성 녹음 등을 의미합니다. 원시 메모의 핵심 가치는 소실되기 쉬운 직관적 생각을 순간적으로 포착하는 신속성에 있습니다.</p>
-                <p>반면, <strong>정제 메모(Refined Memo)</strong>는 수집 단계에서 확보한 원시 메모를 분석하고 불필요한 군더더기를 걷어낸 뒤, 핵심 가치 위주로 재구조화하여 향후 검색과 참조가 용이하도록 표준 포맷으로 변환한 결과물입니다. 원시 메모가 정제 메모로 발전하는 과정에서 정보의 맥락이 선명해지고, 장기적인 보존 가치가 부여됩니다. 이 두 개념을 명확하게 분리하여 관리하는 것이 정보의 혼선을 방지하고 아카이브의 전반적인 품질을 높이는 첫걸음이 됩니다.</p>
-                <div class="v-ico-fc2b">
-                    "정리되지 않은 정보는 지식이 아니라 데이터의 무덤에 불과하다. 기록의 참된 가치는 보관이 아니라 재발견의 용이성에 달려있다."
-                </div>
-            </section>
-
-            <section>
-                <h2>2. 상황별 분류 및 처리 기준</h2>
-                <p>메모의 무분별한 누적을 방지하고 시스템의 인지 부하를 낮추기 위해서는 들어오는 정보를 신속하게 분류할 수 있는 명확한 필터링 기준이 필요합니다. 당장 실행이 필요한 <strong>즉시 실행형 메모(Actionable Memo)</strong>는 2분 이내에 즉시 처리할 수 있는 초단기 과업과, 구체적인 마감 및 단계별 계획 수립이 요구되는 프로젝트성 업무로 이원화하여 분류합니다. 이를 통해 당일 해결해야 할 핵심 과제와 중장기 관찰 대상을 엄격히 통제할 수 있습니다.</p>
-                <p>실행 계획은 없으나 향후 기획이나 창작의 자양분이 되는 <strong>참조용 정보 메모(Reference Memo)</strong>는 웹 서핑 중 수집한 아티클, 연구 보고서 발췌록, 기술 문서 스니펫 등을 포괄합니다. 이러한 참조 정보는 저장 시점에 신뢰할 수 있는 출처(URL)와 본인이 해석한 세 줄 요약을 반드시 병기해야 합니다. 출처와 맥락이 결여된 참조 메모는 시간이 흐름에 따라 신뢰도를 손실하여 노이즈로 전락하기 쉬우므로, 엄격한 검증을 거친 고품질의 지식 정보만을 선별 보관하는 기준이 요구됩니다.</p>
-            </section>
-
-            <section>
-                <h2>3. 기록 보존 및 폐기 프로토콜</h2>
-                <p>지속 가능한 메모 아카이빙 시스템을 유지하는 핵심 동력은 정기적인 정화 작업에 있습니다. 매일 업무 일과 종료 전에 수행하는 <strong>일간 검토(Daily Review)</strong> 과정에서는 당일 무작위로 수집된 임시 보관함의 원시 메모들을 분류하고 가공합니다. 이어지는 <strong>주간 검토(Weekly Review)</strong> 단계에서는 한 주간 축적된 전체 데이터를 거시적 관점에서 조망하며 정보의 연결성을 강화하고 보존 수명을 책정합니다. 다중 검토 주기는 임시 저장소에 쌓인 채 잊히는 방치 데이터의 엔트로피 상승을 억제하는 실질적인 방어 기제 역할을 수행합니다.</p>
-                <p>영구 보존할 가치가 있는 메모는 독창적인 본인의 통찰이 담겨 있거나, 업무 프로세스의 표준 가이드라인이 될 수 있는 문서, 혹은 향후 법적·역사적 증빙력을 가지는 중요한 기록으로 엄격하게 제한합니다. 이 기준에 부합하지 않는 단기 일정 안내, 임시 연락처, 프로젝트 종료로 효력을 상실한 기획 초안 등은 과감히 영구 삭제하거나 별도의 '아카이브 아웃' 영역으로 이동시켜 검색 결과의 혼선을 철저히 방지해야 합니다.</p>
-            </section>
-
-            <section>
-                <h2>4. 자주 묻는 질문 (FAQ)</h2>
-                <div class="faq-item">
-                    <h3>Q. 아날로그 수첩의 손글씨 메모와 디지털 메모를 결합하는 가장 효율적인 방법은 무엇인가요?</h3>
-                    <p>가장 권장하는 프로토콜은 '중앙 집중식 디지털 단일화' 원칙입니다. 종이 수첩이나 노트에 적은 즉흥적인 아이디어는 당일 저녁 스마트폰의 OCR(광학 문자 인식) 스캔 기능을 활용해 텍스트화한 후, 디지털 메모 앱의 수집함으로 이전시킵니다. 아날로그 매체는 직관적인 사고 흐름을 방해하지 않는 '임시 캡처 도구'로만 제한 사용하고, 영구 보존 및 검색 대상은 예외 없이 디지털 단일 플랫폼에 통합하는 것이 효율적입니다.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Q. 태그 분류 체계가 너무 복잡해져서 오히려 검색에 방해가 될 때는 어떻게 해야 합니까?</h3>
-                    <p>태그 폭발(Tag Explosion) 현상을 예방하기 위해 '태그 다이어트'와 '계층형 분류' 기법을 도입해야 합니다. 생성할 수 있는 태그의 최대 개수를 사전에 제한하고, 행동 지향적 동사 태그(예: #읽기, #기획중)와 고정된 대주제 명사 태그(예: #인사세무, #마케팅)로 이원화하여 관리하십시오. 현대 검색 엔진의 성능이 비약적으로 향상되었으므로, 복잡한 태그 생성보다는 본문 내 핵심 키워드를 일관되게 작성해 두는 편이 장기적인 유지비용 측면에서 훨씬 유리합니다.</p>
-                </div>
-            </section>
-
-        </article>
-
-        <aside class="t-side-weuc">
-            <div class="sidebar-card">
-                <h3>메모 상태 분류 기준</h3>
-                <ul>
-                    <li>
-                        <strong><span class="v-ico-0xlt"></span>수집 단계 (Inbox)</strong>
-                        아직 처리되거나 분류되지 않은 순수한 날것 상태의 원시 기록물.
-                    </li>
-                    <li>
-                        <strong><span class="v-ico-0xlt"></span>보류 단계 (Someday)</strong>
-                        가치는 있으나 당장 실행 계획이 없으며 정기 검토 대상인 아이디어.
-                    </li>
-                    <li>
-                        <strong><span class="v-ico-0xlt"></span>영구 보관 (Permanent)</strong>
-                        엄격한 검증을 통과하여 평생에 걸쳐 참조할 가치가 입증된 지식 자산.
-                    </li>
-                </ul>
-            </div>
-
-            <div class="sidebar-card">
-                <h3>효율적 정리의 3대 원칙</h3>
-                <ul>
-                    <li>
-                        <strong>1. 단일 입구 유지 (Single Inbox)</strong>
-                        메모가 수집되는 경로를 단일화하여 정보 손실과 인지 낭비를 원천 차단합니다.
-                    </li>
-                    <li>
-                        <strong>2. 맥락 중심 태깅 (Context Tagging)</strong>
-                        작성 시점의 기분이나 임시 프로젝트명 대신, 미래에 이 정보를 다시 찾을 상황을 상상하여 태그를 부여합니다.
-                    </li>
-                    <li>
-                        <strong>3. 주기적 정화 (Regular Purge)</strong>
-                        쌓아두기만 하는 기록은 쓰레기와 같습니다. 쓰지 않는 정보는 단호히 비우거나 격리하십시오.
-                    </li>
-                </ul>
-            </div>
-        </aside>
-    </main>
-
-    <footer>
-        <div>
-            <p>© 2024 지식 아카이빙 연구소. All Rights Reserved.</p>
+    <!-- Hero Section -->
+    <section class="intro-hero">
+        <div class="intro-container">
+            <span class="intro-tag">Warning: Stop Hoarding Data</span>
+            <h1 class="intro-title">적기만 하고 버려두는<br>메모는 지식의 묘지입니다</h1>
+            <p class="intro-desc">
+                많은 이들이 매일 수십 개의 링크를 스크랩하고, 회의 내용을 타이핑하며, 번뜩이는 아이디어를 메모 앱에 쑤셔 넣습니다. 하지만 일주일 뒤 그 기록 중 단 하나라도 다시 꺼내어 활용한 적이 있습니까? 단언컨대 없습니다. 그것은 기록이 아니라 디지털 쓰레기 수집에 불과합니다.
+            </p>
+            <p class="intro-desc">
+                진정한 <strong>기록 정리 방법</strong>은 단순히 이쁘게 분류하는 행위가 아닙니다. 나중에 반드시 다시 꺼내 쓸 수 있도록 뇌의 부하를 덜어주고, 즉각적인 검색과 재조합이 가능한 구조화된 스니펫을 구축하는 혹독한 규칙의 적용입니다. 본 페이지는 당신의 무질서한 메모 습관을 타파할 실전적 기준을 직접적으로 제시합니다.
+            </p>
         </div>
-        <div>
-            <p>본 사이트의 정보는 체계적인 기록 관리를 돕기 위한 공익 목적으로 제공됩니다.</p>
+    </section>
+
+    <!-- Clip Grid Section: Terminology Snippets -->
+    <section class="grid-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>용어 정의: 자산과 쓰레기를 가르는 기준</h2>
+                <p>기록 정리 방법을 완전히 새로 고침하기 위해 반드시 머릿속에 이식해야 할 4가지 핵심 개념</p>
+            </div>
+
+            <div class="clip-grid">
+                <!-- Card 1 -->
+                <div class="grid-card">
+                    <span class="card-num">01</span>
+                    <h3 class="card-title">액티브 메모 (Active Memo)</h3>
+                    <p class="card-text">
+                        작성 후 72시간 이내에 반드시 구체적인 실행이나 편집, 혹은 다른 프로젝트의 재료로 사용될 메모를 뜻합니다. 기한이 없는 생각은 메모가 아니라 단순 낙서입니다.
+                    </p>
+                    <p class="card-text">
+                        만약 이 범주에 들어가지 않는다면, 즉시 보관함 깊숙이 파묻거나 삭제하는 것이 뇌의 인지적 자원을 보존하는 가장 현명한 길입니다.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="grid-card">
+                    <span class="card-num">02</span>
+                    <h3 class="card-title">컨텍스트 태깅 (Context Tagging)</h3>
+                    <p class="card-text">
+                        '기획', '마케팅' 같은 뻔하고 넓은 단어로 분류하는 고전적 폴더 구조를 전면 거부합니다. 메모가 생성된 맥락과 사용될 '도구/상황'을 기준으로 태그를 매깁니다.
+                    </p>
+                    <p class="card-text">
+                        예컨대 '#회의자료'가 아니라 '#스마트폰으로-이동중-읽을거리'처럼 물리적 맥락을 태그로 지정해야만 기록의 부활 가능성이 획기적으로 올라갑니다.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="grid-card">
+                    <span class="card-num">03</span>
+                    <h3 class="card-title">원-아웃 원칙 (One-Out Rule)</h3>
+                    <p class="card-text">
+                        새로운 정보나 메모 조각을 한 개 추가할 때마다, 기존에 있던 무가치한 메모 한 개를 찾아 영구 삭제하거나 압축 아카이브로 넘기는 엄격한 정화 프로세스입니다.
+                    </p>
+                    <p class="card-text">
+                        무제한의 용량은 인간을 게으르게 만듭니다. 의도적으로 정보의 총량을 제어하는 감각만이 기록 정리 방법을 체득하는 지름길입니다.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="grid-card">
+                    <span class="card-num">04</span>
+                    <h3 class="card-title">재조합 스니펫 (Re-usable Snippet)</h3>
+                    <p class="card-text">
+                        하나의 메모는 오직 한 가지의 독립된 메시지만을 담고 있어야 합니다. 길고 복잡한 보고서 형식의 메모는 결국 다시 읽히지 않는 장벽이 됩니다.
+                    </p>
+                    <p class="card-text">
+                        레고 블록처럼 언제든 복사하여 다른 기획서나 글쓰기에 끼워 맞출 수 있는 최소 단위로 기록을 파편화하여 유지하십시오.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Criteria Detail Section: Situational Rules -->
+    <section class="criteria-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>상황별 기록 분류 가이드라인</h2>
+                <p>인원, 시점, 목적에 따라 설계된 실전 기록 필터링 시스템</p>
+            </div>
+
+            <div class="criteria-flex">
+                <!-- Block 1 -->
+                <div class="criteria-block">
+                    <div class="criteria-label">Phase 01: Capture</div>
+                    <div class="criteria-content">
+                        <h3>수집 단계의 냉혹한 필터링 (생성 시점)</h3>
+                        <p>
+                            떠오르는 모든 영감을 메모 앱에 담는 행위는 에너지만 낭비하는 최악의 수집법입니다. 아이디어가 떠오른 순간, "이것이 나의 현 프로젝트에 3일 이내로 기여할 수 있는가?"라는 질문에 1초 만에 답하지 못한다면 기록하지 마십시오. 
+                        </p>
+                        <p>
+                            정말로 가치 있는 아이디어는 메모하지 않아도 뇌리에 다시 남습니다. 스치듯 사라지는 시답잖은 정보들을 굳이 텍스트로 박제하여 검색 노이즈를 늘리지 않는 것이 기록 정리 방법의 첫 단추입니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Block 2 -->
+                <div class="criteria-block">
+                    <div class="criteria-label">Phase 02: Refine</div>
+                    <div class="criteria-content">
+                        <h3>일주일 단위의 영구 정제 (정리 시점)</h3>
+                        <p>
+                            매주 일요일 저녁, 주중에 급하게 휘갈겨 쓴 '임시 메모'들을 한데 모아 냉정하게 도살하는 시간을 가져야 합니다. 살아남는 메모는 오직 1) 명확한 출처가 표기되어 있고, 2) 나만의 언어로 재해석된 3줄 요약이 포함되어 있으며, 3) 향후 검색할 키워드가 본문에 명시된 것들뿐입니다.
+                        </p>
+                        <p>
+                            단순히 웹서핑 중 복사 붙여넣기만 해둔 날것의 링크 조각들은 이 단계에서 가차 없이 삭제됩니다. 가공되지 않은 남의 지식은 당신의 뇌와 기록 보관소에 아무런 이득을 주지 못합니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Block 3 -->
+                <div class="criteria-block">
+                    <div class="criteria-label">Phase 03: Scale</div>
+                    <div class="criteria-content">
+                        <h3>개인과 팀의 공유 경계 설정 (인원 및 목적)</h3>
+                        <p>
+                            혼자만 보는 메모는 다소 거칠어도 무방하지만, 협업 도구나 팀 아카이브로 넘어가는 순간 기록은 '공적 문서'의 격을 갖추어야 합니다. 개인적 감상이나 불명확한 약어는 완전히 배제하고, 동료가 배경지식 없이 읽어도 즉각 이해할 수 있도록 용어를 일원화하십시오.
+                        </p>
+                        <p>
+                            팀의 지식 베이스가 망가지는 이유는 개개인이 자신의 투박한 메모 습관을 그대로 공용 공간에 배설하기 때문입니다. 공유 폴더로 이동하는 기록은 철저한 규격화를 거친 완성품이어야만 합니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>자주 묻는 기록 정리의 한계와 진실</h2>
+                <p>정리 강박증에 빠진 이들이 반드시 마주하는 딜레마에 대한 명쾌한 해답</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4 class="faq-question">Q. 노션이나 옵시디언 같은 도구 중 어떤 것이 기록 정리에 가장 좋습니까?</h4>
+                    <p class="faq-answer">
+                        도구는 본질이 아닙니다. 어떤 도구를 쓰든 당신의 분류 기준과 삭제 기준이 모호하다면 결과는 똑같은 아카이브 무덤이 될 것입니다. 가장 원시적인 텍스트 파일(TXT) 하나로도 쓸모 있는 메모 체계를 유지하지 못한다면, 복잡한 기능의 협업 툴은 오히려 당신에게 독이 될 뿐입니다. 도구의 세련됨에 숨지 마십시오.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <h4 class="faq-question">Q. 폴더 깊이를 몇 단계까지 구성하는 것이 이상적일까요?</h4>
+                    <p class="faq-answer">
+                        무조건 최대 2단계를 넘지 않아야 합니다. 대분류와 소분류를 넘어서는 순간, 인간의 뇌는 검색을 포기하고 새로운 노트를 무지성으로 생성하기 시작합니다. 폴더 구조는 최대한 납작하게(Flat) 유지하고, 강력한 글로벌 검색 기능과 고유한 메타데이터 태그를 활용해 기록을 수평적으로 찾아내는 훈련을 하십시오.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <h4 class="faq-question">Q. 이미 수만 개의 정제되지 않은 과거 메모가 쌓여 있는데 어떻게 처리합니까?</h4>
+                    <p class="faq-answer">
+                        그것들을 하나하나 분류하겠다는 멍청한 계획은 지금 당장 포기하십시오. 수만 개의 과거 메모는 전부 '구 보관소(Archive_Old)'라는 단 하나의 폴더에 몰아넣고 완전히 봉인하십시오. 그리고 오늘부터 생성되는 메모부터 새로운 규칙을 100% 엄격하게 적용하는 것이 지치지 않고 아카이브를 소생시키는 유일한 탈출구입니다.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <h4 class="faq-question">Q. 메모를 자꾸 지우면 나중에 정말 필요할 때 후회하지 않을까요?</h4>
+                    <p class="faq-answer">
+                        그 '나중에 언젠가'라는 순간은 평생 오지 않습니다. 만약 정말로 중요한 정보였다면 인터넷 검색이나 주변 동료를 통해 3분 안에 다시 찾아낼 수 있는 시대에 살고 있습니다. 당신의 기록 저장소는 세상 모든 정보를 백업하는 백과사전이 아닙니다. 철저히 당신의 실천을 돕는 '단기 기억 촉진 장치'여야 합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="k-foot-vnb5">
+        <div class="t-foot-dcgk">
+            <div class="footer-logo">CLIP DESK</div>
+            <div class="footer-copy">
+                &copy; 2025 CLIP DESK. All rights reserved. 무단 복제 및 상업적 활용을 엄격히 금합니다.
+            </div>
         </div>
     </footer>
 

@@ -1,427 +1,67 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="bpaas-design-system" content="editorial-apple">
-  <meta name="bpaas-design-theme" content="kr-journal-cream">
-  <title>기록 정리 방법: 상황별 실행 사례와 정보 아카이빙 프레임워크</title>
-  <meta name="description" content="학술 연구, 다중 프로젝트 기획, 기업용 지식 관리 등 다양한 비즈니스 상황에 적용 가능한 실증적 기록 정리 방법을 소개합니다. 시간대별 정보 분류 체계를 확인하세요.">
-  <meta name="keywords" content="기록 정리 방법, 정보 아카이빙, 효율적 기록, 디지털 정리, 정보 관리">
-  <link rel="canonical" href="https://clipdesk.shop/blog-4.html">
-  <style>
-    :root {
-      --bg-color: #faf8f5;
-      --card-bg: #ffffff;
-      --text-primary: #1d1d1f;
-      --text-secondary: #515154;
-      --accent-color: #8e8e93;
-      --border-color: #e5e0d8;
-      --font-serif: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-    }
-    
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-primary);
-      font-family: var(--font-serif);
-      line-height: 1.75;
-      margin: 0;
-      padding: 0;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* Header & Navigation */
-    .n-wrap-yohz-wrap {
-      max-width: 68rem;
-      margin: 0 auto;
-      padding: 3rem 1.5rem 2rem 1.5rem;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 2.5rem;
-    }
-
-    .nav-logo {
-      font-weight: 700;
-      font-size: 1.1rem;
-      letter-spacing: -0.03em;
-      text-decoration: none;
-      color: var(--text-primary);
-      text-transform: uppercase;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-      transition: color 0.2s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--text-primary);
-    }
-
-    .n-wrap-yohz-wrap h1 {
-      font-size: 2.25rem;
-      font-weight: 800;
-      letter-spacing: -0.04em;
-      line-height: 1.25;
-      margin: 0 0 1rem 0;
-      color: var(--text-primary);
-    }
-
-    .n-wrap-yohz-wrap p {
-      font-size: 1.05rem;
-      color: var(--text-secondary);
-      max-width: 42rem;
-      margin: 0;
-    }
-
-    /* Main Grid Layout */
-    .k-wrap-np1o {
-      max-width: 68rem;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-      display: grid;
-      grid-template-columns: 2.5fr 1fr;
-      gap: 2.5rem;
-    }
-
-    /* Content Area */
-    .content-area {
-      display: flex;
-      flex-direction: column;
-      gap: 3rem;
-    }
-
-    .section-block {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 2.5rem;
-    }
-
-    .section-block:last-child {
-      border-bottom: none;
-    }
-
-    .section-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      margin-top: 0;
-      margin-bottom: 1.2rem;
-      color: var(--text-primary);
-    }
-
-    .section-text {
-      font-size: 0.975rem;
-      color: var(--text-secondary);
-      margin-bottom: 1.2rem;
-      text-align: justify;
-    }
-
-    /* Cards inside Content */
-    .t-item-kab8 {
-      background-color: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin-top: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
-    }
-
-    .t-item-kab8 h4 {
-      margin-top: 0;
-      margin-bottom: 0.75rem;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--text-primary);
-    }
-
-    .t-item-kab8 p {
-      margin: 0;
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-
-    /* Sidebar Area */
-    .t-side-weuc {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    .sidebar-widget {
-      background-color: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 1.5rem;
-    }
-
-    .sidebar-widget h3 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      margin-top: 0;
-      margin-bottom: 1rem;
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 0.5rem;
-    }
-
-    .sidebar-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .sidebar-list li {
-      font-size: 0.875rem;
-      color: var(--text-secondary);
-      margin-bottom: 0.75rem;
-      display: flex;
-      align-items: flex-start;
-    }
-
-    /* Icon Placeholders */
-    .v-ico-0xlt {
-      display: inline-block;
-      width: 6px;
-      height: 6px;
-      background-color: var(--accent-color);
-      border-radius: 50%;
-      margin-right: 8px;
-      margin-top: 7px;
-      flex-shrink: 0;
-    }
-
-    .v-ico-fc2b {
-      font-size: 0.75rem;
-      color: #0071e3;
-      font-weight: bold;
-      margin-right: 6px;
-    }
-
-    /* Footer */
-    footer {
-      background-color: var(--card-bg);
-      border-top: 1px solid var(--border-color);
-      padding: 3rem 1.5rem;
-      margin-top: 5rem;
-    }
-
-    .footer-content {
-      max-width: 68rem;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
-
-    .footer-text {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-    }
-
-    @media (max-width: 48rem) {
-      .k-wrap-np1o {
-        grid-template-columns: 1fr;
-      }
-      .n-wrap-yohz-wrap h1 {
-        font-size: 1.8rem;
-      }
-    }
-  </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "headline": "기록 정리 방법: 상황별 실행 사례와 정보 아카이빙 프레임워크",
-    "description": "학술 연구, 다중 프로젝트 기획, 기업용 지식 관리 등 다양한 비즈니스 상황에 적용 가능한 실증적 기록 정리 방법을 소개합니다.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "기록 방법론 연구소"
-    }
-  }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사례 | 기록 정리 방법 — 당신의 아카이브가 매번 실패하는 진짜 이유</title>
+    <meta name="description" content="단순한 메모가 아니라 실전에서 바로 꺼내 쓰는 기록 정리 방법의 구체적인 사례를 다룹니다. 상황별로 실패하는 패턴을 분석하고, 이를 어떻게 실전적인 지식 자산으로 전환하는지 구조적으로 설명합니다.">
+    <meta name="keywords" content="기록 정리 방법, 정보 정리 사례, 아카이빙 전략, 실전 메모법, 데이터 분류, 지식 구조화">
+    <link rel="canonical" href="https://clipdesk.shop/blog-4.html">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-clip-oxide">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="사례 | 기록 정리 방법 — 당신의 아카이브가 매번 실패하는 진짜 이유">
   <meta property="og:url" content="https://clipdesk.shop/blog-4.html">
 </head>
 <body>
-
-  <!-- Header & Navigation -->
-  <header class="n-wrap-yohz-wrap">
-    <nav class="nav-container">
-      <a href="/" class="nav-logo">아카이브 저널</a>
-      <div class="nav-links">
-        <a href="/">홈</a>
-        <a href="/cases">사례</a>
-        <a href="/framework">방법론</a>
-      </div>
-    </nav>
-    <h1>기록 정리 방법: 실제 적용 가능한 상황별 프레임워크와 실증 사례</h1>
-    <p>축적된 지식이 실제 행동으로 이어지기 위해서는 직관적이고 일관된 분류 체계가 필요합니다. 학술 연구부터 기업 프로젝트 관리까지, 다양한 업무 환경에서 검증된 구조화 모델을 제시합니다.</p>
-  </header>
-
-  <!-- Main Content Grid -->
-  <main class="k-wrap-np1o">
-    
-    <!-- Left Column: Content Area -->
-    <div class="content-area">
-      
-      <!-- Section 1: Introduction -->
-      <section class="section-block">
-        <h2 class="section-title">왜 상황별 기록 정리 방법이 필요한가</h2>
-        <p class="section-text">
-          우리가 일상과 업무에서 매일 마주하는 정보의 양은 개인이 단순 기억력에 의존해 처리할 수 있는 범위를 이미 넘어섰습니다. 체계적인 기록 정리 방법이 부재한 상태에서 무작위로 축적된 메모는 시간이 지날수록 검색성을 상실하고, 결국 불필요한 디지털 쓰레기로 남게 됩니다. 올바른 정보 관리는 단순히 정보를 쌓아두는 것이 아니라, 미래의 특정 시점에 필요한 정보를 최단 시간 내에 추출할 수 있도록 사전에 경로를 설계하는 작업입니다.
-        </p>
-        <p class="section-text">
-          본 가이드에서는 서로 다른 직무와 목표를 가진 주체들이 실제 업무 환경에서 어떻게 아카이브 체계를 구축하고 유지하는지 실증적인 사례를 통해 살펴봅니다. 각 사례는 사전 계획 단계와 당일 실행 단계, 그리고 사후 정리 단계로 세분화되어 있어, 독자 여러분의 현재 업무 환경에 맞춰 즉각적으로 변형하여 적용할 수 있습니다.
-        </p>
-      </section>
-
-      <!-- Section 2: Case A (Academic/Research) -->
-      <section class="section-block">
-        <h2 class="section-title">사례 1: 연구원 및 학술 분석가의 정보 아카이빙</h2>
-        <p class="section-text">
-          학술 분석이나 심층 연구를 수행하는 직무에서는 수많은 논문, 기사, 통계 데이터 등 상이한 포맷의 자료를 수집해야 합니다. 이들이 겪는 가장 큰 난제는 수집한 자료의 원천을 명확히 보존하면서도 자신만의 비평적 논리를 덧붙여 통합하는 것입니다. 이를 해결하기 위해 연구원들은 메타데이터 중심의 기록 정리 방법을 채택하고 있습니다.
-        </p>
-        <p class="section-text">
-          예컨대, 하나의 주제에 대해 자료를 조사할 때 논문명, 저자, 발표 연도, 핵심 키워드를 최상단에 고정하는 템플릿을 활용합니다. 당일 수집한 자료는 요약문과 본인의 생각을 명확히 분리하여 기록하며, 매주 금요일 오후에는 일주일간 수집된 메모들을 주제별 상위 폴더로 이동시키는 정기 정제 과정을 거칩니다. 이러한 주기적인 정제 작업을 통해 정보 간의 연결고리가 형성되며 장기 연구 프로젝트의 든든한 밑바탕이 됩니다.
-        </p>
-        
-        <div class="t-item-kab8">
-          <h4>학술 아카이빙 핵심 구조</h4>
-          <p>
-            • 수집 단계: 디지털 웹 클리퍼를 통한 원문 링크 및 서지 정보 자동 추출<br>
-            • 분류 단계: 태그 기반(주제, 상태값: 읽음/읽는중/보관) 분류를 적용하여 계층 구조 최소화<br>
-            • 정제 단계: 주 1회 핵심 문장 3줄 요약본 작성을 통해 지식의 내재화 진행
-          </p>
+    <header class="r-head-o4fq-wrapper">
+        <nav class="k-foot-vnb5">
+            <ul class="r-head-o4fq-list">
+                <li><a href="/">홈</a></li>
+                <li><a href="/method">방법론</a></li>
+                <li><a href="/case">사례</a></li>
+                <li><a href="/contact">문의</a></li>
+            </ul>
+        </nav>
+        <div class="m-ico-7wiz-container">
+            <button class="t-foot-dcgk">메뉴</button>
         </div>
-      </section>
+    </header>
 
-      <!-- Section 3: Case B (Project Planner) -->
-      <section class="section-block">
-        <h2 class="section-title">사례 2: 다중 프로젝트 기획자의 태스크 및 이력 관리</h2>
-        <p class="section-text">
-          동시에 서너 개의 프로젝트를 조율해야 하는 기획자나 PM의 경우, 실시간으로 쏟아지는 피드백과 일정 변경 사항을 놓치지 않는 것이 핵심입니다. 이들의 기록 정리 방법은 철저히 '행동 지향적(Action-oriented)'이어야 합니다. 기록이 단순히 과거의 이력 추적에 머물지 않고, 다음 행동을 지시하는 이정표 역할을 하도록 구조를 짜야 합니다.
-        </p>
-        <p class="section-text">
-          기획자들은 주로 '오늘 할 일', '대기 중인 업무', '완료된 업무'로 칸반 보드 형태를 차용한 3단 구조를 적극 활용합니다. 출근 직후 당일 결정해야 할 안건과 미팅 일정을 확인하고, 미팅 중 발생하는 결정 사항은 즉시 해당 카드 내부에 타임스탬프와 함께 기록합니다. 프로젝트가 종료되면 해당 카드는 아카이브 섹션으로 이동하여 향후 유사 프로젝트 진행 시 훌륭한 래퍼런스로 재활용됩니다.
-        </p>
+    <main>
+        <section>
+            <h1>상황별 기록 정리 사례: 왜 당신의 메모는 쓰레기가 되는가</h1>
+            <p>많은 사람이 기록을 '저장하는 행위' 자체에만 몰두합니다. 하지만 저장된 데이터는 곧바로 부패하기 시작합니다. 맥락 없는 정보는 시간이 지날수록 파편화되고, 정작 필요할 때 검색조차 불가능해집니다. 아래 사례들은 실제 정보 과부하 상황에서 흔히 발생하는 오류를 짚고, 이를 어떻게 실전적으로 재구조화해야 하는지 보여줍니다.</p>
+            <p>우리는 단순히 예쁜 노트를 만드는 방법을 다루지 않습니다. 당신의 뇌가 기억하지 못하는 정보를 시스템이 대신 기억하게 만드는 '외부 뇌' 구축 전략입니다. 아래 예시는 기록의 유형에 따라 어떻게 체계를 잡아야 하는지를 구체적인 시나리오로 제시합니다.</p>
+        </section>
 
-        <div class="t-item-kab8">
-          <h4>행동 지향적 기획서 정리 팁</h4>
-          <p>
-            모든 회의록과 기획 초안은 날짜 역순(가장 최신본이 위로 오도록)으로 배치합니다. 이메일, 메신저 링크 등 협업 도구와의 연결 주소를 기록 상단에 배치하여 불필요한 탐색 시간을 최소화하는 것이 업무 능률 향상의 열쇠입니다.
-          </p>
-        </div>
-      </section>
+        <section>
+            <h2>사례 1: 읽기만 하고 멈추는 '독서 및 아티클 스크랩'</h2>
+            <p>대다수는 흥미로운 글을 발견하면 링크를 복사해 어딘가에 붙여넣습니다. 하지만 90% 이상의 링크는 영원히 다시 열리지 않습니다. 이는 '나중에 읽어야지'라는 막연한 희망이 정보의 가치를 훼손하기 때문입니다. 정보를 쌓는 것이 아니라, 그 정보가 나의 기존 지식 체계와 어떻게 충돌하거나 연결되는지를 기록해야 합니다.</p>
+            <p>해결책은 간단합니다. 요약문을 적는 것이 아니라 '나의 언어'로 재구성하는 것입니다. 해당 아티클이 내 인생이나 업무에 어떤 통찰을 줄 수 있는지, 혹은 어떤 질문을 던지는지를 반드시 한 줄 이상의 코멘트로 남겨야 합니다. 링크만 저장하는 것은 아카이빙이 아니라 쓰레기 매립입니다. 검색 키워드가 아니라 '질문' 단위로 분류하십시오.</p>
+        </section>
 
-      <!-- Section 4: Case C (Enterprise Wiki) -->
-      <section class="section-block">
-        <h2 class="section-title">사례 3: 소규모 스타트업의 지식 관리 및 사내 위키 구축</h2>
-        <p class="section-text">
-          인적 자원이 한정된 소규모 조직에서는 개개인의 노하우가 공유되지 않고 사장되는 경우가 빈번합니다. 신규 입사자가 들어올 때마다 동일한 프로세스를 반복해서 설명해야 하는 비효율을 줄이기 위해, 공동 편집이 가능한 클라우드 기반의 사내 위키를 구축하는 기업들이 늘고 있습니다.
-        </p>
-        <p class="section-text">
-          성공적인 스타트업의 기록 정리 방법은 '누구나 쉽게 기여할 수 있는 단순함'에 있습니다. 복잡한 폴더 트리 대신 검색 엔진에 최적화된 키워드 기반의 페이지 생성을 권장합니다. 예를 들어 '마케팅_페이스북광고집행가이드'처럼 직관적인 페이지 제목을 사용하고, 정기적으로 최신 정보 여부를 검증하는 담당자를 지정하여 사장되는 문서가 없도록 관리합니다.
-        </p>
+        <section>
+            <h2>사례 2: 회의 및 미팅 기록의 휘발성 문제</h2>
+            <p>회의록을 받아쓰는 사람은 하수입니다. 실전적인 기록자는 회의의 핵심 결정사항과 '그 이후에 해야 할 행동'을 중심으로 기록합니다. 회의 중 오고 간 모든 발언을 받아 적으려는 시도는 기록의 본질을 흐리게 만듭니다. 결국 누가 무엇을 언제까지 완료해야 하는지, 그리고 어떤 의사결정이 내려졌는지에 집중해야 합니다.</p>
+            <p>성공적인 기록을 위해서는 '액션 아이템(Action Item)' 칸을 별도로 분리하십시오. 회의가 끝난 직후, 그 기록을 다시 보지 않아도 바로 작업에 착수할 수 있도록 구조화되어야 합니다. 날짜와 참석자 명단은 부차적입니다. 가장 중요한 것은 '다음 단계(Next Step)'가 명확히 보이는가입니다. 이 규칙을 지키지 않으면 회의록은 과거를 박제하는 무덤이 됩니다.</p>
+        </section>
 
-        <div class="t-item-kab8">
-          <h4>협업 지식 창고 운영 규칙</h4>
-          <p>
-            • 규칙 1: 문서는 작성일과 최종 수정자를 명확히 기입할 것<br>
-            • 규칙 2: 더 이상 유효하지 않은 정보는 삭제하는 대신 'Legacy(과거 유산)' 태그를 붙여 격리할 것<br>
-            • 규칙 3: 텍스트 위주로 간결하게 작성하되 복잡한 과정은 스크린샷으로 대체할 것
-          </p>
-        </div>
-      </section>
+        <section>
+            <h2>사례 3: 아이디어 파편과 영감 관리</h2>
+            <p>샤워할 때나 길을 걷다 떠오른 영감은 휘발성이 강합니다. 이를 정리하지 않으면 뇌는 계속해서 새로운 정보를 처리하는 데 에너지를 낭비합니다. 그러나 대부분은 이 파편들을 제대로 관리하지 못해 정작 필요한 순간에 꺼내지 못합니다. 핵심은 '즉시 캡처(Capture)'하고 '정기적으로 병합(Merge)'하는 시스템입니다.</p>
+            <p>아이디어는 독립적인 기록이 아니라, 이미 존재하는 지식들과 결합할 때 비로소 가치를 얻습니다. 일주일에 한 번은 흩어진 메모를 확인하고, 기존에 구축해 둔 지식 베이스와 연결하십시오. 메모가 100개가 되어도 연결되지 않으면 그저 나열된 텍스트일 뿐입니다. 지식의 그물망을 만드는 것이 기록 정리 방법의 최종 목적지입니다.</p>
+        </section>
 
-      <!-- Section 5: FAQ -->
-      <section class="section-block">
-        <h2 class="section-title">자주 묻는 질문 (FAQ)</h2>
-        
-        <div style="margin-bottom: 1.5rem;">
-          <strong style="display: block; margin-bottom: 0.5rem; color: var(--text-primary);">Q1. 수집한 정보의 양이 너무 많아 분류를 시작할 엄두가 나지 않습니다.</strong>
-          <p class="section-text" style="margin: 0;">
-            A1. 처음부터 완벽한 분류 체계를 만들려고 하면 쉽게 포기하게 됩니다. 우선은 모든 정보를 '수신함(Inbox)'이라는 하나의 가상 폴더에 모아두고, 매일 업무 종료 전 10분 동안만 가장 시급한 정보 5개씩 분류하는 습관을 들여보세요. 점진적으로 확장하는 방식이 장기 지속에 훨씬 유리합니다.
-          </p>
-        </div>
+        <section>
+            <h2>기록을 생존 전략으로 만드는 3단계 체크리스트</h2>
+            <p>당신의 기록이 가치가 있는지 확인하고 싶다면 다음 세 가지 기준을 대입해 보십시오. 첫째, 6개월 뒤에 이 기록을 다시 보았을 때 그 당시의 맥락을 완벽히 이해할 수 있는가? 둘째, 이 기록을 통해 즉시 다음 단계의 행동을 수행할 수 있는가? 셋째, 이 기록이 다른 지식과 연결될 수 있는 고리가 있는가?</p>
+            <p>이 기준을 통과하지 못하는 기록은 즉시 삭제하거나 폐기하는 것이 낫습니다. 과도한 정보는 결정을 내리는 데 방해만 될 뿐입니다. 정리는 더하기가 아니라 빼기입니다. 불필요한 정보의 소음을 제거하고, 당신의 핵심 자산이 될 지식만 남기는 작업이 바로 우리가 추구하는 아카이빙의 정수입니다.</p>
+        </section>
+    </main>
 
-        <div>
-          <strong style="display: block; margin-bottom: 0.5rem; color: var(--text-primary);">Q2. 아날로그 노트 기록과 디지털 기록 정리 방법을 어떻게 병행해야 할까요?</strong>
-          <p class="section-text" style="margin: 0;">
-            A2. 아날로그 노트는 아이디어 발상이나 미팅 중 빠른 스케치 단계에서 매우 유용합니다. 다만 검색성과 보존성을 위해 주 1회 아날로그 노트의 핵심 내용을 디지털 도구로 타이핑하거나 스캔하여 업로드하는 '디지털화 작업'을 병행하는 것이 좋습니다.
-          </p>
-        </div>
-      </section>
-
-    </div>
-
-    <!-- Right Column: Sidebar -->
-    <aside class="t-side-weuc">
-      
-      <div class="sidebar-widget">
-        <h3>기록 정리의 3대 원칙</h3>
-        <ul class="sidebar-list">
-          <li>
-            <span class="v-ico-0xlt"></span>
-            <span><strong>단순성의 법칙:</strong> 분류 카테고리는 최대 3단계를 넘지 않도록 단순하게 구성합니다.</span>
-          </li>
-          <li>
-            <span class="v-ico-0xlt"></span>
-            <span><strong>검색성 우선:</strong> 예쁘게 정리하는 것보다 검색 창에 키워드를 쳤을 때 바로 나오는 것이 중요합니다.</span>
-          </li>
-          <li>
-            <span class="v-ico-0xlt"></span>
-            <span><strong>주기적 정제:</strong> 방치된 기록은 왜곡됩니다. 주간 혹은 월간 단위로 아카이브를 점검하세요.</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="sidebar-widget">
-        <h3>추천 아카이빙 주기</h3>
-        <ul class="sidebar-list">
-          <li>
-            <span class="v-ico-fc2b">매일</span>
-            <span>당일 발생한 휘발성 메모의 일차 수집 및 스케줄 대조</span>
-          </li>
-          <li>
-            <span class="v-ico-fc2b">매주</span>
-            <span>프로젝트 진행 상황 업데이트 및 완료 문서 보관함 이동</span>
-          </li>
-          <li>
-            <span class="v-ico-fc2b">매월</span>
-            <span>중요 지식 베이스 검토 및 더 이상 유효하지 않은 자료 폐기</span>
-          </li>
-        </ul>
-      </div>
-
-    </aside>
-
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-text">
-        © 2024 아카이브 저널. All Rights Reserved. 본 페이지는 올바른 기록 정리 방법론을 제시하는 정보성 지식 공간입니다.
-      </div>
-      <div class="nav-links">
-        <a href="/">개인정보처리방침</a>
-        <a href="/cases">이용약관</a>
-      </div>
-    </div>
-  </footer>
-
+    <footer>
+        <p>© 2024 ClipDesk. 정보의 파편을 지식의 자산으로.</p>
+    </footer>
 </body>
 </html>
