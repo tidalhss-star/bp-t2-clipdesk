@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title><![CDATA[서울 유흥 이용 가이드]]></title>
+  <title><![CDATA[서울 기록 정리 방법]]></title>
   <link>https://clipdesk.shop</link>
   <description><![CDATA[서울 정보 블로그 관련 최신 뉴스, 서비스 안내, 리얼 후기 정보를 신속하게 전달하는 공식 RSS 피드입니다.]]></description>
   <language>ko-KR</language>
-  <pubDate>Wed, 29 Jul 2026 11:16:17 GMT</pubDate>
-  <lastBuildDate>Wed, 29 Jul 2026 11:16:17 GMT</lastBuildDate>
+  <pubDate>Wed, 29 Jul 2026 11:25:00 GMT</pubDate>
+  <lastBuildDate>Wed, 29 Jul 2026 11:25:00 GMT</lastBuildDate>
   <atom:link href="https://clipdesk.shop/feed.xml" rel="self" type="application/rss+xml" />
   
     <item>
-      <title><![CDATA[서울 유흥 이용 가이드 - 공식 홈페이지 오픈 안내]]></title>
+      <title><![CDATA[서울 기록 정리 방법 - 공식 홈페이지 오픈 안내]]></title>
       <link>https://clipdesk.shop/</link>
       <guid isPermaLink="true">https://clipdesk.shop/</guid>
       <description><![CDATA[서울 정보 블로그 관련 최신 뉴스, 서비스 안내, 리얼 후기 정보를 신속하게 전달하는 공식 RSS 피드입니다.]]></description>
-      <pubDate>Wed, 29 Jul 2026 11:16:17 GMT</pubDate>
+      <pubDate>Wed, 29 Jul 2026 11:25:00 GMT</pubDate>
     </item>
 </channel>
 </rss>
