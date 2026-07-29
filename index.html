@@ -3,486 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>기록 정리 방법 — 서울 모임 공간과 접대 업종 지역별 비교</title>
-    <meta name="description" content="서울 주요 지역의 비즈니스 모임 공간과 접대 업종(셔츠룸, 텐프로, 가라오케 등)의 특징을 비교하고, 실무자를 위해 나중에 쉽게 찾을 수 있도록 아카이빙하는 기록 정리 방법을 공유합니다.">
-    <meta name="keywords" content="기록 정리 방법, 서울 모임 공간, 비즈니스 접대, 셔츠룸, 텐프로, 가라오케, 정보 아카이빙">
-    <link rel="canonical" href="https://clipdesk.shop/">
-    
     <meta name="bpaas-design-system" content="editorial-apple">
-    <meta name="bpaas-design-theme" content="kr-journal-linen">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://clipdesk.shop/">
-    <meta property="og:title" content="기록 정리 방법 — 서울 모임 공간과 접대 업종 지역별 비교">
-    <meta property="og:description" content="서울 주요 지역의 비즈니스 모임 공간과 접대 업종의 특징을 비교하고, 실무자를 위한 체계적인 아카이빙 기록법을 제안합니다.">
-    <meta property="og:image" content="https://clipdesk.shop/og-image.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://clipdesk.shop">
-    <meta property="twitter:title" content="기록 정리 방법 — 서울 모임 공간과 접대 업종 지역별 비교">
-    <meta property="twitter:description" content="서울 주요 지역의 비즈니스 모임 공간과 접대 업종의 특징을 비교하고, 실무자를 위한 체계적인 아카이빙 기록법을 제안합니다.">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Serif+KR:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+    <meta name="bpaas-design-theme" content="kr-journal-cream">
+    <title>기록 정리 방법 — 시점과 맥락에 따른 정보 아카이빙 전략</title>
+    <meta name="description" content="읽은 것과 해 본 것을 나중에 다시 찾기 위해 기록을 정리하는 방법론을 제시합니다. 미리 정할 것과 당일 결정할 것의 구분, 시간대에 따른 효율적인 정보 관리 체계를 제안합니다.">
+    <meta name="keywords" content="기록 정리 방법, 정보 아카이빙, 효율적 기록, 디지털 정리, 정보 관리">
+    <link rel="canonical" href="https://clipdesk.shop/">
     <style>
-        /* CSS Reset & Variables */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        :root {
-            --primary-color: #2a2622;
-            --secondary-color: #f7f4ee;
-            --accent-color: #a35b3a;
-            --font-serif: 'Nanum Myeongjo', 'Noto Serif KR', serif;
-            --line-color: rgba(163, 91, 58, 0.2);
-        }
-
-        body {
-            background-color: var(--secondary-color);
-            color: var(--primary-color);
-            font-family: var(--font-serif);
-            line-height: 1.8;
-            padding: 40px 24px;
-            max-width: 1040px;
-            margin: 0 auto;
-            word-break: keep-all;
-        }
-
-        /* Tilted Header & Handcrafted Feel */
-        header.t-img-b3fw {
-            margin-bottom: 80px;
-            position: relative;
-            transform: rotate(-0.5deg);
-        }
-
-        h1.m-box-85e1 {
-            font-size: 2.8rem;
-            font-weight: 800;
-            line-height: 1.2;
-            color: var(--primary-color);
-            display: inline-block;
-            position: relative;
-            margin-bottom: 16px;
-            letter-spacing: -1px;
-        }
-
-        h1.m-box-85e1 span {
-            background: linear-gradient(transparent 62%, rgba(163, 91, 58, 0.18) 62%);
-        }
-
-        .q-foot-zmm1 {
-            font-size: 1.1rem;
-            color: var(--accent-color);
-            font-style: italic;
-            margin-top: 8px;
-        }
-
-        /* Minimal Sticky Navigation with Structural Entropy */
-        nav.n-grid-3doo {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background-color: rgba(247, 244, 238, 0.95);
-            backdrop-filter: blur(4px);
-            padding: 12px 0;
-            border-bottom: 1px dashed var(--line-color);
-            margin-bottom: 40px;
-        }
-
-        nav.n-grid-3doo ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        nav.n-grid-3doo a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: color 0.2s ease;
-        }
-
-        nav.n-grid-3doo a:hover {
-            color: var(--accent-color);
-            background: linear-gradient(transparent 80%, var(--accent-color) 80%);
-        }
-
-        /* Layout: Date Journal Two-Column CSS Grid */
-        .v-side-ccow-entry {
-            display: grid;
-            grid-template-columns: 8.5rem 1fr;
-            gap: 24px;
-            padding: 40px 0;
-            border-bottom: 1px dashed var(--line-color);
-        }
-
-        .v-side-ccow-entry:last-of-type {
-            border-bottom: none;
-        }
-
-        /* Uneven margin for hand-crafted rhythm */
-        .v-side-ccow-entry:nth-child(even) {
-            padding-left: 16px;
-            padding-right: 8px;
-        }
-
-        .x-top-wz7r-meta {
-            font-size: 0.95rem;
-            color: var(--accent-color);
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            padding-top: 4px;
-        }
-
-        .x-top-wz7r-content h2 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-            line-height: 1.3;
-        }
-
-        .x-top-wz7r-content p {
-            font-size: 1.05rem;
-            margin-bottom: 18px;
-            color: #3a3530;
-            text-align: justify;
-        }
-
-        .x-top-wz7r-content ul {
-            margin-bottom: 18px;
-            padding-left: 20px;
-        }
-
-        .x-top-wz7r-content li {
-            margin-bottom: 8px;
-            font-size: 1rem;
-        }
-
-        /* Quiet Blockquote to break rhythm */
-        blockquote.v-card-kh2y-quote {
-            grid-column: 1 / -1;
-            padding: 32px;
-            margin: 24px 0;
-            border-left: 2px solid var(--accent-color);
-            font-style: italic;
-            font-size: 1.15rem;
-            color: #5a524a;
-            background-color: rgba(163, 91, 58, 0.03);
-            line-height: 1.8;
-            transform: rotate(0.3deg);
-        }
-
-        /* FAQ Section */
-        .m-grid-6mxc-section {
-            margin-top: 60px;
-            padding-top: 40px;
-            border-top: 2px dashed var(--accent-color);
-        }
-
-        .m-grid-6mxc-section h2 {
-            font-size: 1.8rem;
-            margin-bottom: 32px;
-            text-align: center;
-        }
-
-        .m-grid-6mxc-item {
-            margin-bottom: 28px;
-        }
-
-        .m-grid-6mxc-question {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--accent-color);
-            margin-bottom: 8px;
-        }
-
-        .m-grid-6mxc-answer {
-            font-size: 1rem;
-            line-height: 1.7;
-            color: #3a3530;
-        }
-
-        /* Author Bio Block */
-        .r-img-wvyt-card {
-            margin-top: 80px;
-            padding: 32px;
-            border-top: 1px solid var(--primary-color);
-            display: flex;
-            align-items: center;
-            gap: 24px;
-        }
-
-        .r-img-wvyt-avatar {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background-color: var(--accent-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--secondary-color);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .r-img-wvyt-info h3 {
-            font-size: 1.1rem;
-            margin-bottom: 6px;
-        }
-
-        .r-img-wvyt-info p {
-            font-size: 0.95rem;
-            color: #5a524a;
-        }
-
-        /* Footer */
-        footer.m-wrap-7rhp {
-            margin-top: 80px;
-            padding-top: 24px;
-            border-top: 1px dashed var(--line-color);
-            text-align: center;
-            font-size: 0.85rem;
-            color: #8c8275;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 52rem) { /* 32rem is 512px, 52rem is 832px */
-            body {
-                padding: 24px 16px;
-            }
-
-            header.t-img-b3fw {
-                margin-bottom: 40px;
-            }
-
-            h1.m-box-85e1 {
-                font-size: 2rem;
-            }
-
-            .v-side-ccow-entry {
-                grid-template-columns: 1fr;
-                gap: 12px;
-                padding: 24px 0;
-            }
-
-            .x-top-wz7r-meta {
-                border-bottom: 1px solid var(--line-color);
-                padding-bottom: 6px;
-                margin-bottom: 8px;
-            }
-
-            .r-img-wvyt-card {
-                flex-direction: column;
-                text-align: center;
-                gap: 16px;
-            }
-        }
+        :root { --primary: #23201c; --secondary: #fbfbf9; --accent: #c9a227; }
+        body { font-family: 'Nanum Myeongjo', 'Noto Serif KR', serif; background-color: var(--secondary); color: var(--primary); line-height: 1.8; margin: 0; padding: 0; }
+        .n-wrap-yohz-wrap { transform: rotate(-1.5deg); margin: 60px 0; padding: 20px; border-bottom: 2px dashed var(--primary); }
+        h1 { font-size: 3rem; margin: 0; }
+        .k-wrap-np1o { display: grid; grid-template-columns: 6.5rem 1fr; max-width: 800px; margin: 0 auto; gap: 24px; padding: 40px; }
+        .t-side-weuc { font-weight: bold; color: var(--accent); }
+        .v-ico-0xlt { border-bottom: 1px solid #ddd; padding: 40px 0; }
+        .v-ico-fc2b { background: linear-gradient(transparent 62%, #fcefb9 62%); }
+        .t-item-kab8 { font-style: italic; border-left: 3px solid var(--accent); padding-left: 20px; margin: 40px 0; color: #555; }
+        footer { text-align: center; padding: 80px 20px; font-size: 0.9rem; border-top: 1px solid #ccc; }
+        @media (max-width: 32rem) { .k-wrap-np1o { grid-template-columns: 1fr; } }
     </style>
-
-    <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "LocalBusiness",
-          "@id": "https://clipdesk.shop/#localbusiness",
-          "name": "기록 정리 방법 아카이브",
-          "image": "https://clipdesk.shop/og-image.jpg",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "서울",
-            "addressRegion": "서울특별시",
-            "addressCountry": "KR"
-          },
-          "url": "https://clipdesk.shop"
-        },
-        {
-          "@type": "Service",
-          "name": "비즈니스 모임 공간 및 접대 업종 비교 정보 제공",
-          "provider": {
-            "@id": "https://clipdesk.shop/#localbusiness"
-          },
-          "description": "서울 주요 지역별 모임 성격과 의전에 적합한 공간(셔츠룸, 텐프로, 가라오케, 펍 등)의 특성을 체계적으로 정리하여 기록하는 방법론을 제시합니다."
-        },
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "홈",
-              "item": "https://clipdesk.shop"
-            }
-          ]
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "비즈니스 모임 장소를 아카이빙할 때 가장 먼저 분류해야 할 기준은 무엇인가요?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "가장 중요한 기준은 '참석자의 성격'과 '이동 편의성'입니다. 모임의 목적이 격식 있는 비즈니스인지, 캐주얼한 친목인지에 따라 텐프로, 쩜오 같은 고급 의전 공간부터 하이퍼블릭, 셔츠룸, 가라오케, 일반 펍까지 적합한 업종이 나뉩니다. 이를 지역별 동선과 함께 기록해 두는 것이 실무 지침의 핵심입니다."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "강남권과 강북권의 모임 진행 흐름은 구체적으로 어떻게 다른가요?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "강남권(역삼, 삼성 등)은 텐카페, 하이퍼블릭, 셔츠룸, 마사지 등 다양한 형태의 전문 업종이 촘촘하게 밀집해 있어 1차와 2차 사이의 이동 동선이 매우 짧습니다. 반면 강북권(종로, 마포 등)은 전통적인 비즈니스클럽이나 노래방, 펍 위주로 넓게 분산되어 있어, 장소 간 이동 시간과 교통 체증을 미리 계산에 넣고 동선을 기획해야 피로도를 줄일 수 있습니다."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "참석자들의 피로도를 줄이기 위한 이동 동선 설계 노하우가 있을까요?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "첫 모임 장소(식사)가 정해지면, 반경 1.5km 이내 혹은 택시로 10분 내에 도달할 수 있는 2차 장소(가라오케, 펍, 노래방 등)를 매칭해야 합니다. 퇴근 시간대 서울 시내 정체를 감안하여, 한강을 건너는 동선은 가급적 피하고 동일 자치구 내에서 모든 일정을 소화할 수 있도록 아카이브 자료를 미리 구성해 두는 것이 좋습니다."
-              }
-            }
-          ]
-        }
-      ]
+      "@type": "Blog",
+      "name": "기록 정리 방법",
+      "author": { "@type": "Person", "name": "기록 연구가 정연" },
+      "description": "효율적인 정보 아카이빙과 기록의 시점 중심 정리 방법론."
     }
     </script>
+  <meta property="og:url" content="https://clipdesk.shop/">
 </head>
 <body>
-
-    <!-- Sticky Navigation with Shuffled Order & Structural Entropy -->
-    <nav class="n-grid-3doo" role="navigation" aria-label="메인 메뉴">
-        <ul>
-            <li style="order: 3;"><a href="#intro">아카이브 소개</a></li>
-            <li style="order: 1;"><a href="#entry-gangnam-gangbuk">지역별 흐름 대비</a></li>
-            <li style="order: 4;"><a href="#entry-logistics">이동 동선 계산</a></li>
-            <li style="order: 2;"><a href="#entry-matching">업종별 매칭 가이드</a></li>
-            <li style="order: 5;"><a href="#faq">자주 묻는 질문</a></li>
-        </ul>
-    </nav>
-
-    <!-- Handcrafted Title Block -->
-    <header class="t-img-b3fw" id="intro">
-        <h1 class="m-box-85e1">
-            <span>기록 정리 방법</span>
-        </h1>
-        <div class="q-foot-zmm1">서울 모임 공간과 접대 업종, 나중에 헤매지 않도록 한눈에 남겨두기</div>
+    <header class="n-wrap-yohz-wrap">
+        <h1>기록 정리 방법</h1>
+        <p>기억의 파편을 의미 있는 자산으로 바꾸는 아카이빙 가이드</p>
     </header>
 
-    <!-- Main Content Flow -->
-    <main role="main">
-
-        <!-- Entry 1: Region Flow Comparison -->
-        <article class="v-side-ccow-entry" id="entry-gangnam-gangbuk" role="region" aria-label="강남과 강북의 모임 흐름 비교">
-            <div class="x-top-wz7r-meta">
-                <span>ANALYSIS</span><br>
-                <span>2023. 11. 24</span>
-            </div>
-            <div class="x-top-wz7r-content">
-                <h2>모이는 지점에 따라 갈리는 선택: 강남과 강북의 흐름 대비</h2>
-                <p>서울에서 중요한 비즈니스 모임이나 대접할 자리를 기획할 때, 가장 먼저 마주하는 난관은 '지역의 특성'을 파악하는 일입니다. 모임의 시작점이 강남이냐, 혹은 강북이냐에 따라 전체적인 자리가 흘러가는 호흡이 완전히 달라지기 때문입니다. 이를 미리 파악하고 아카이빙해 두면, 예기치 못한 비즈니스 상황에서도 당황하지 않고 완벽한 대안을 제시할 수 있습니다.</p>
-                <p>강남권(특히 삼성, 역삼, 선릉 일대)은 텐프로, 쩜오, 텐카페 같은 고품격 의전 공간부터 하이퍼블릭, 셔츠룸, 가라오케까지 거의 모든 형태의 업종이 촘촘하게 군락을 이루고 있습니다. 이곳은 한 건물 내에서 혹은 아주 짧은 도보 이동만으로도 2차, 3차 장소로 전환이 가능하다는 강력한 이점이 있습니다. 반면 종로나 마포 같은 강북 도심권은 전통적인 비즈니스클럽, 클래식 펍, 그리고 노래방 위주의 정형화된 흐름을 보입니다. 강북은 공간의 다양성 면에서는 강남보다 덜할 수 있지만, 특유의 차분하고 격식 있는 분위기 덕분에 깊이 있는 대화를 나누기에 적절합니다. 이러한 지역별 인프라 밀도를 평소에 꼼꼼히 기록해 두면 모임 준비자의 실무적 부담이 절반으로 줄어듭니다.</p>
-            </div>
+    <main class="k-wrap-np1o">
+        <div class="t-side-weuc">2024.05.20</div>
+        <article class="v-ico-0xlt">
+            <h2>미리 정할수록 유리한 기록의 우선순위</h2>
+            <p>정보를 기록하는 행위는 단순히 받아 적는 것이 아니라, <span class="v-ico-fc2b">나중에 꺼내 볼 경로를 설계하는 작업</span>입니다. 기록의 성격상 목적지가 명확해야 하는 데이터는 미리 분류 체계를 정해두는 것이 좋습니다. 예를 들어 업무용 레퍼런스나 학습용 자료는 태그보다는 '날짜'와 '프로젝트'를 기준으로 폴더링을 선행하십시오.</p>
+            <p>참석자나 독자를 고려해야 하는 기록이라면, 본인의 관점이 아닌 '전체 흐름'을 기준으로 작성해야 합니다. 정보의 우선순위를 미리 정해두면 당일 급하게 기록할 때 발생하는 누락을 방지하고, 나중에 읽었을 때도 정보의 맥락을 즉시 파악할 수 있습니다.</p>
         </article>
 
-        <!-- Entry 2: Logistics & Planning -->
-        <article class="v-side-ccow-entry" id="entry-logistics" role="region" aria-label="이동 동선과 피로도 계산">
-            <div class="x-top-wz7r-meta">
-                <span>LOGISTICS</span><br>
-                <span>2023. 11. 10</span>
-            </div>
-            <div class="x-top-wz7r-content">
-                <h2>실무자의 부담을 줄이는 핵심: 이동 동선과 피로도 계산법</h2>
-                <p>자리를 준비하는 독자 입장에서 가장 신경 쓰이는 부분은 참석자들의 육체적, 정신적 피로도입니다. 아무리 훌륭한 가라오케나 고급 펍을 예약했더라도, 1차 식사 장소에서 2차 목적지까지 가는 데 도로 위에서 30분 이상을 허비한다면 자리는 시작도 전에 가라앉게 마련입니다. 특히 여의도와 마포처럼 강을 끼고 이동해야 하는 구간은 정체 시간대를 반드시 고려해야 합니다.</p>
-                <p>따라서 기록을 정리할 때는 반드시 '연계 동선'을 묶어서 기록하는 습관을 들여야 합니다. 예를 들어 '여의도에서 식사 후 마포권 비즈니스클럽 연계', 혹은 '강남역 일식당 이용 후 서초동 가라오케 이동'처럼 이동 수단과 소요 시간을 패키지로 아카이빙하는 것입니다. 장소 간의 거리가 멀어질 때는 중간에 피로를 풀어줄 수 있는 가벼운 마사지 샵이나 릴랙스 공간을 완충 지대로 배치하는 것도 훌륭한 방법입니다. 참석자 전체의 동선을 설계할 때, 이동 시간을 최소화하는 것이야말로 실무자의 기획력을 증명하는 가장 확실한 지표입니다.</p>
-            </div>
+        <div class="t-side-weuc">2024.05.18</div>
+        <article class="v-ico-0xlt">
+            <h2>당일에 정해도 되는 유연한 기록 항목</h2>
+            <p>반면, 당일의 감상이나 현장에서 즉흥적으로 얻은 아이디어는 지나치게 엄격한 분류를 강제하지 마십시오. 정형화되지 않은 기록은 그 자체로 유연성을 가질 때 더 생명력이 깁니다. 당일에는 핵심 키워드 3개와 당시의 분위기를 묘사하는 짧은 문장 하나면 충분합니다.</p>
+            <p>이러한 즉흥 기록은 훗날 정기적인 '기록 정리 주간'에 더 상세한 맥락을 덧붙이는 것이 효율적입니다. 당장 완벽하게 정리하려 하면 기록 자체가 짐이 되어 포기하게 되기 때문입니다.</p>
         </article>
 
-        <!-- Quiet Blockquote to break the rhythm -->
-        <blockquote class="v-card-kh2y-quote">
-            "결국 좋은 대접이란 화려한 인테리어보다, 참석자들이 이동하며 느끼는 피로와 미묘한 감정의 변화까지 미리 읽고 물 흐르듯 안내하는 배려에서 완성됩니다. 우리가 남기는 소박한 기록들은 그 배려를 실현하는 유일한 자산입니다."
-        </blockquote>
-
-        <!-- Entry 3: Industry Matching -->
-        <article class="v-side-ccow-entry" id="entry-matching" role="region" aria-label="목적에 맞는 업종 매칭">
-            <div class="x-top-wz7r-meta">
-                <span>MATCHING</span><br>
-                <span>2023. 10. 15</span>
-            </div>
-            <div class="x-top-wz7r-content">
-                <h2>참석자 기준의 업종 매칭 가이드</h2>
-                <p>자리를 준비할 때는 본인의 선호도가 아닌 '참석자 전원의 성향'을 만족시킬 수 있는 업종을 선택해야 합니다. 비즈니스의 무게감과 격식의 정도에 따라 매칭해야 할 업종의 카테고리는 명확히 나뉩니다. 이러한 기준을 카테고리별로 분류하여 나만의 노트에 아카이빙해 두는 것이 좋습니다.</p>
-                <ul>
-                    <li><strong>고격식 의전형:</strong> 텐프로, 쩜오, 텐카페, 고급 비즈니스클럽. 조용하고 은밀한 대화가 필요하며, VIP 고객을 모시는 자리에 적합합니다.</li>
-                    <li><strong>친목 및 캐주얼형:</strong> 하이퍼블릭, 셔츠룸, 풀싸롱, 일반 가라오케. 직장 동료들과의 단합 대회나 캐주얼한 비즈니스 뒤풀이에 적당합니다.</li>
-                    <li><strong>가벼운 소통형:</strong> 모던 펍, 노래방, 마사지 결합형 라운지. 무겁지 않은 분위기에서 짧고 임팩트 있게 대화를 마무리할 때 유용합니다.</li>
-                </ul>
-                <p>이처럼 업종의 특징과 수용 가능한 인원, 그리고 분위기를 데이터베이스화해 두면 갑작스러운 모임 지시가 내려와도 몇 분 안에 최적의 후보지를 제안할 수 있습니다. 각 업종이 지닌 고유의 분위기를 왜곡 없이 객관적으로 기록해 두는 것이 실무형 아카이브의 핵심입니다.</p>
-            </div>
-        </article>
-
-        <!-- Graphic elements (DOM noise) -->
-        <div style="text-align: center; margin: 40px 0;">
-            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='30' viewBox='0 0 100 30'><path d='M10 15 Q 30 5, 50 15 T 90 15' fill='none' stroke='%23a35b3a' stroke-width='1.5' stroke-dasharray='4'/></svg>" alt="graphic_element_a2f8" style="max-width: 100%; height: auto;">
-        </div>
-
-        <!-- FAQ Section -->
-        <section class="m-grid-6mxc-section" id="faq" role="region" aria-label="자주 묻는 질문">
-            <h2>기록 정리 방법에 관한 자주 묻는 질문</h2>
-            
-            <div class="m-grid-6mxc-item">
-                <div class="m-grid-6mxc-question">Q1. 기록을 정리할 때 보안이나 프라이버시는 어떻게 관리하나요?</div>
-                <div class="m-grid-6mxc-answer">
-                    비즈니스 관련 접대 장소나 텐프로, 셔츠룸, 가라오케 등의 업종 정보는 민감할 수 있으므로, 개인 아카이브 앱(예: 노션, 에버노트)에 암호 잠금을 설정하여 관리하는 것이 좋습니다. 업소의 실명 대신 자신만 알아볼 수 있는 이니셜이나 코드명(예: '역삼-A', '마포-B')을 사용하면 프라이버시를 완벽히 보호하면서 실무 자료를 유지할 수 있습니다.
-                </div>
-            </div>
-
-            <div class="m-grid-6mxc-item">
-                <div class="m-grid-6mxc-question">Q2. 처음 방문하는 지역의 업종 정보는 어떻게 신뢰성을 검증하고 기록하나요?</div>
-                <div class="m-grid-6mxc-answer">
-                    특정 추천 글이나 광고성 후기에 의존하기보다, 해당 지역의 전반적인 유흥 인프라 흐름과 로컬 지도를 먼저 분석하십시오. 대형 비즈니스 빌딩 근처에 위치한 곳들은 대체로 기본적인 의전 수준이 보장되는 경향이 있습니다. 첫 방문 후에는 동선 만족도, 방음 수준, 대기 시간 등을 주관적 기준에 따라 즉시 메모해 두는 것이 가장 정확합니다.
-                </div>
-            </div>
-
-            <div class="m-grid-6mxc-item">
-                <div class="m-grid-6mxc-question">Q3. 모임 장소 아카이브를 만들 때 가장 추천하는 포맷이 있나요?</div>
-                <div class="m-grid-6mxc-answer">
-                    스프레드시트를 활용해 [지역 / 업종 / 주요 특징 / 소요 시간 / 추천 인원] 형식의 테이블로 정리하는 것을 추천합니다. 이렇게 구조화해 두면 나중에 필터 기능을 통해 '강남역 근처', '가라오케 업종', '8인 이상 수용 가능'과 같은 조건에 맞는 장소를 3초 안에 빠르게 필터링해 찾아낼 수 있습니다.
-                </div>
-            </div>
+        <section class="t-item-kab8">
+            "기록이란 미래의 나에게 보내는 가장 친절한 편지입니다. 완벽한 문장보다, 그날의 맥락을 회상할 수 있는 단서 하나가 더 중요합니다."
         </section>
 
-        <!-- E-A-T Author Signal -->
-        <section class="r-img-wvyt-card" role="region" aria-label="작성자 소개">
-            <div class="r-img-wvyt-avatar">정현</div>
-            <div class="r-img-wvyt-info">
-                <h3>작성자: 로컬 아카이버 정현</h3>
-                <p>서울 전역의 비즈니스 모임 공간과 접대 업종 동선을 7년간 기록하고 분류해 온 정보 아카이버입니다. 실무자의 번거로움을 덜어주는 체계적인 공간 아카이빙 솔루션을 연구하고 있습니다.</p>
-            </div>
-        </section>
-
+        <div class="t-side-weuc">2024.05.15</div>
+        <article class="v-ico-0xlt">
+            <h2>시간대에 따라 달라지는 기록의 선택지</h2>
+            <p>기록을 정리하기 가장 좋은 시간은 정보가 유입된 직후의 '숏텀 메모'와 그날의 마지막 '리뷰 시간'으로 나뉩니다. 오전에는 정보의 사실관계와 데이터를 정확히 남기고, 저녁에는 그 정보가 자신의 경험과 어떻게 연결되는지 '의미'를 덧붙이는 방식을 권장합니다.</p>
+            <p>바쁜 일과 중에 기록을 정리하는 것은 실무 부담을 가중합니다. 따라서 이동 시간이나 대기 시간 등 '비는 시간'을 활용하여 기록의 태그를 정리하거나 연관된 아카이빙 항목으로 분류하는 짧은 루틴을 만드십시오.</p>
+        </article>
     </main>
 
-    <!-- DOM Noise: cache markers and comments -->
-    <!-- cache_id:7a9f12bc83d4 -->
-    <div class="cache-marker" style="opacity:0;height:0;overflow:hidden">fe92a10b</div>
+    <section>
+        <h3>자주 묻는 질문</h3>
+        <p>Q: 기록을 분류하는 기준이 너무 많아서 고민입니다.<br>
+        A: 분류 기준을 '주제'가 아닌 '시점'으로 바꿔보세요. '언제, 어떤 목적으로 이 정보를 찾을 것인가'를 스스로에게 물어보면 불필요한 카테고리가 자연스럽게 정리됩니다.</p>
+        <p>Q: 기록을 다시 찾지 않게 됩니다.<br>
+        A: 기록의 90%는 다시 보지 않아도 됩니다. 다시 찾을 가치가 있는 10%의 기록에만 집중하고, 나머지는 과감히 아카이빙 툴의 검색 기능에 맡기는 것이 정신 건강에 좋습니다.</p>
+    </section>
 
-    <!-- Footer -->
-    <footer class="m-wrap-7rhp">
-        <p>© 2023 기록 정리 방법 아카이브 (clipdesk.shop). All rights reserved.</p>
-        <p style="font-size: 0.75rem; margin-top: 8px; color: #b0a69a;">본 블로그는 서울 지역의 모임 공간 및 비즈니스 접대 업종에 대한 비교 정보를 정리하는 정보성 공간이며, 불법 서비스나 예약을 유도하지 않습니다.</p>
+    <footer>
+        <div class="x-main-zu2a">
+            <strong>기록 연구가 정연</strong> | 지난 5년간 수많은 개인의 정보를 아카이빙하고 분류 체계를 연구해온 전문가입니다. 복잡한 기록을 단순하고 직관적인 자산으로 만드는 법을 제안합니다.
+        </div>
+        <p>© 2024 clipdesk.shop. All rights reserved.</p>
+        <!-- cache_id:a7f8b9c0d1e2 -->
+        <div class="cache-marker" style="opacity:0;height:0;overflow:hidden">x9y8z7w6</div>
     </footer>
-
 </body>
 </html>
