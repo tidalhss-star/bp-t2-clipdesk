@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://clipdesk.shop/sitemap.xml
+Sitemap: https://clipdesk.shop/sitemap-index.xml
