@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메모 — 유흥 이용 가이드</title>
+    <meta name="description" content="서울의 다양한 야간 엔터테인먼트 업종의 용어와 선택 기준을 일기 형식의 가벼운 메모로 정리했습니다. 초행자도 쉽게 이해할 수 있는 실전 요약집입니다.">
+    <meta name="keywords" content="유흥 이용 가이드, 서울 밤문화, 셔츠룸, 가라오케, 텐카페, 초행자 가이드, 이용 팁">
+    <link rel="canonical" href="https://clipdesk.shop/notes.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="메모 — 유흥 이용 가이드">
+    <meta property="og:description" content="서울의 다양한 야간 엔터테인먼트 업종의 용어와 선택 기준을 일기 형식의 가벼운 메모로 정리했습니다.">
+    <meta property="og:url" content="https://clipdesk.shop/notes.html">
+
+    <!-- CSS / Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Noto+Serif+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #faf6f0;
+            --text-color: #2c2520;
+            --primary-color: #8c2d19;
+            --secondary-color: #d4b295;
+            --border-color: #e6ded4;
+            --card-bg: #ffffff;
+            --font-serif: 'Noto Serif KR', 'Nanum Myeongjo', serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-serif);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .t-main-jump {
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        /* Top minimal menu */
+        .t-nav-kx29-wrapper {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .t-nav-kx29 {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .t-nav-kx29-logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            letter-spacing: -0.05em;
+        }
+
+        .t-nav-kx29-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .t-nav-kx29-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+
+        .t-nav-kx29-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Header */
+        .journal-header {
+            max-width: 800px;
+            margin: 4rem auto 2rem auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .journal-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            letter-spacing: -0.03em;
+        }
+
+        .journal-header p {
+            font-size: 1.1rem;
+            color: #665c54;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* Main Layout */
+        .journal-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Journal Card Style */
+        .journal-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 12px rgba(44, 37, 32, 0.03);
+            position: relative;
+        }
+
+        .journal-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: var(--secondary-color);
+        }
+
+        .journal-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.85rem;
+            color: #8c827a;
+            border-bottom: 1px dashed var(--border-color);
+            padding-bottom: 0.75rem;
+        }
+
+        .journal-date {
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: 0.05em;
+        }
+
+        .journal-card h2 {
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        .journal-card p {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            color: #3e3530;
+            text-align: justify;
+        }
+
+        /* Bullet style list inside journal */
+        .journal-list {
+            list-style: none;
+            margin: 1.5rem 0;
+            padding-left: 0.5rem;
+        }
+
+        .journal-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            color: #4a4039;
+        }
+
+        .journal-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2520;
+            color: #e6ded4;
+            padding: 4rem 2rem;
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            border-bottom: 1px solid #423831;
+            padding-bottom: 2rem;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: #d4b295;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            color: #8c827a;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .journal-card {
+                padding: 2rem 1.5rem;
+            }
+            .journal-header h1 {
+                font-size: 2rem;
+            }
+            .t-nav-kx29 {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" class="t-main-jump">본문 바로가기</a>
+
+    <!-- Navigation -->
+    <nav class="t-nav-kx29-wrapper">
+        <div class="t-nav-kx29">
+            <a href="https://clipdesk.shop/" class="t-nav-kx29-logo">서울 야간 가이드</a>
+            <div class="t-nav-kx29-links">
+                <a href="https://clipdesk.shop/">홈</a>
+                <a href="https://clipdesk.shop/intro">업종 소개</a>
+                <a href="https://clipdesk.shop/guide">이용 가이드</a>
+                <a href="https://clipdesk.shop/memo">메모</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="journal-header">
+        <h1>기획자의 일상 메모장</h1>
+        <p>퇴근길에 문득 생각난 질문들, 지인들의 단골 질문을 바탕으로 적어 내려간 서울의 밤문화 선택 기준과 소소한 힌트들을 기록합니다.</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="journal-container" id="main-content">
+
+        <!-- Entry 1 -->
+        <article class="journal-card">
+            <div class="journal-meta">
+                <span class="journal-date">OCTOBER 12</span>
+                <span class="journal-category">#용어 스니펫</span>
+            </div>
+            <h2>초행길에 가장 많이 헷갈리는 '그 이름들' 정리</h2>
+            <p>
+                매번 지인들이 술자리 약속을 잡을 때마다 저에게 물어보곤 합니다. "거기랑 거기, 도대체 뭐가 다른 거야?" 사실 매일같이 지나치는 화려한 네온사인 뒤에 숨겨진 업종들의 차이는 처음 접하는 사람들에겐 외계어처럼 느껴지기 마련이죠. 굳이 복잡하게 생각할 필요 없이, 아주 단순하고 직관적인 기준만 머릿속에 넣어두어도 나중에 부끄러운 상황을 피할 수 있답니다.
+            </p>
+            <p>
+                가장 흔하게 혼동하는 단어들을 아주 가볍게 요약해보면 이렇습니다. 셔츠룸은 대중적이고 빠른 템포로 진행되는 캐주얼한 공간이라고 생각하면 편해요. 격식을 차리기보다는 가벼운 친목 도모나 2차 모임에 적합하죠. 반면 텐카페는 대화의 퀄리티와 프라이빗함을 조금 더 보장받고 싶을 때 선택하는 곳입니다. 가격대가 조금 더 나가는 만큼 조용하고 정제된 대화가 오가는 분위기죠.
+            </p>
+            <ul class="journal-list">
+                <li><strong>셔츠룸:</strong> 대중적인 접근성, 정해진 시스템에 따라 빠르고 경쾌하게 진행되는 캐주얼한 성격의 공간.</li>
+                <li><strong>텐카페:</strong> 고급스러운 대화와 프라이빗한 비즈니스 미팅을 위해 차분한 호흡으로 소통하는 공간.</li>
+                <li><strong>가라오케:</strong> 생일 파티나 단체 모임 등, 다 함께 노래 부르고 춤추며 즐기는 가장 대중적이고 호불호 없는 선택지.</li>
+            </ul>
+            <p>
+                결국 중요한 건 '오늘 모임의 성격이 무엇인가'입니다. 그냥 신나게 소리 지르고 놀고 싶다면 가라오케로 직진하면 되고, 조금 더 깊이 있고 대접받는 느낌을 원한다면 텐카페나 룸 형태의 공간을 찾아보는 것이 정답에 가깝더라구요.
+            </p>
+        </article>
+
+        <!-- Entry 2 -->
+        <article class="journal-card">
+            <div class="journal-meta">
+                <span class="journal-date">OCTOBER 24</span>
+                <span class="journal-category">#상황별 가이드</span>
+            </div>
+            <h2>인원수와 모임 목적별로 어울리는 장소 고르기</h2>
+            <p>
+                며칠 전 한 선배가 다급하게 전화를 걸어왔습니다. 중요한 거래처 바이어를 모셔야 하는데 어디로 가야 센스 있다는 소리를 듣겠냐는 질문이었죠. 이런 질문을 받을 때마다 저는 늘 동행하는 인원수와 비즈니스의 무게감을 먼저 되묻곤 합니다. 장소의 선택이 그날 밤의 성패를 좌우하기도 하니까요.
+            </p>
+            <p>
+                혼자서 조용하게 스트레스를 풀거나 생각을 정리하고 싶을 때는 너무 격식 있는 곳보다는 마음 편한 가라오케나 단골 위주의 아담한 펍이 차라리 낫습니다. 반면 3~4인 규모의 비즈니스 미팅이라면 이야기가 달라집니다. 이때는 상대방의 성향을 극도로 배려해야 해요. 조용하게 중요한 밀담을 나눠야 한다면 외부 소음이 완벽히 차단되고 프라이버시가 보장되는 정통 룸 공간이 최선입니다.
+            </p>
+            <ul class="journal-list">
+                <li><strong>비즈니스 바이어 접대:</strong> 무엇보다 프라이버시와 정중한 서비스가 우선. 소음이 적고 조용한 대화가 가능한 텐카페 등 고급 라인업 추천.</li>
+                <li><strong>직장 동료들과의 회식 2차:</strong> 가성비와 유쾌함이 중요하므로, 예산 범위를 명확히 설정할 수 있는 정찰제 가라오케나 대중적인 룸 선택.</li>
+                <li><strong>혼자만의 휴식:</strong> 불필요한 비용 낭비를 줄이고, 가벼운 대화 상대를 찾을 수 있는 캐주얼하고 콤팩트한 매장 선택.</li>
+            </ul>
+            <p>
+                인원이 5명 이상으로 늘어나면 가급적이면 호불호가 갈리지 않고 공간이 널찍한 대형 가라오케를 고르는 것이 좋습니다. 모두의 음악 취향이나 노는 스타일을 완벽히 맞추기는 어렵기 때문에, 공간 자체가 주는 쾌적함과 다양한 음향 시설이 갖춰진 곳이 실패 확률을 크게 낮춰주더군요.
+            </p>
+        </article>
+
+        <!-- Entry 3 -->
+        <article class="journal-card">
+            <div class="journal-meta">
+                <span class="journal-date">NOVEMBER 05</span>
+                <span class="journal-category">#실전 체크리스트</span>
+            </div>
+            <h2>예약하기 전 꼭 확인해야 할 사소하지만 결정적인 디테일</h2>
+            <p>
+                약속 장소를 결정하고 전화를 걸어 예약을 잡기 직전, 꼭 한 번만 더 생각해야 할 것들이 있습니다. 밤거리에서의 시간은 낮의 시간보다 훨씬 빠르게 흘러가고, 생각지도 못한 돌발 변수가 많이 발생하기 때문이죠. 제가 수많은 모임을 주최하며 뼈저리게 느낀 체크리스트를 공유합니다.
+            </p>
+            <p>
+                첫째는 '입장 시간의 타이밍'입니다. 보통 강남권의 인기 있는 매장들은 밤 9시부터 11시 사이에 손님이 가장 집중됩니다. 이 피크 타임에 방문하면 아무리 예약을 했더라도 대기 시간이 길어지거나 서비스의 밀도가 낮아질 수밖에 없어요. 그래서 저는 조금 번거롭더라도 저녁 7시 반에서 8시 사이, 즉 오픈 직후나 피크 타임 이전에 자리를 잡는 것을 강력히 권장합니다. 훨씬 여유롭고 대접받는 기분을 누릴 수 있거든요.
+            </p>
+            <ul class="journal-list">
+                <li><strong>조기 방문의 이점:</strong> 대기 시간 최소화, 담당 스태프의 집중 케어 가능, 조용하고 여유로운 분위기 선점.</li>
+                <li><strong>주차 및 발렛 확인:</strong> 서울 주요 유흥가는 주차 대란입니다. 차량 이동 시 발렛 서비스 지원 여부와 비용을 사전 파악해두어야 동선이 꼬이지 않습니다.</li>
+                <li><strong>정찰제 및 추가 비용 확인:</strong> 기본 주류와 안주 외에 추가되는 룸비, 봉사료(T/C), 세금 등이 투명하게 고지되어 있는지 반드시 구두로라도 재확인해야 정산 시 오해가 없습니다.</li>
+            </ul>
+            <p>
+                특히 정산 부분에서 불필요한 오해가 생기면 즐거웠던 밤의 기억이 한순간에 불쾌함으로 바뀔 수 있습니다. 예약 단계에서 "기본 비용 외에 현장에서 추가로 청구되는 금액이 어떤 것들이 있나요?"라고 단 한 문장만 물어봐도 나중에 겪을 수 있는 골치 아픈 문제를 90% 이상 예방할 수 있답니다.
+            </p>
+        </article>
+
+        <!-- Entry 4 -->
+        <article class="journal-card">
+            <div class="journal-meta">
+                <span class="journal-date">NOVEMBER 18</span>
+                <span class="journal-category">#마인드셋</span>
+            </div>
+            <h2>지갑과 멘탈을 지키는 슬기로운 밤문화 태도</h2>
+            <p>
+                마지막으로 적어두고 싶은 메모는 테크닉적인 부분보다 훨씬 중요한 '마음가짐'에 대한 이야기입니다. 화려한 조명과 술기운에 취하다 보면 자칫 평소의 이성을 잃고 무리한 지출을 하거나 매너 없는 행동을 하기 쉽습니다. 이는 본인의 지갑뿐만 아니라 함께한 일행과의 관계, 그리고 본인의 평판까지 갉아먹는 지름길이 되죠.
+            </p>
+            <p>
+                가장 좋은 방법은 자리에 앉기 전에 오늘 사용할 '최대 예산 상한선'을 마음속으로 정해두는 것입니다. 술자리가 무르익어 분위기가 고조되다 보면 "한 병 더!"를 외치기 십상이지만, 주최자나 결제 담당자가 중심을 잡고 처음에 계획했던 선에서 깔끔하게 자리를 마무리하는 절제가 필요합니다. 오히려 적당한 아쉬움을 남기고 일어설 때, 그날의 모임이 가장 아름답고 세련된 기억으로 남는 법이더라구요.
+            </p>
+            <p>
+                또한 일하시는 스태프분들을 대할 때의 매너도 중요합니다. 당연한 비용을 지불하고 이용하는 서비스이지만, 서로 존중하는 태도를 보일 때 서비스의 질은 자연스럽게 올라가기 마련입니다. 매너 있는 손님에게는 담당자들도 하나라도 더 챙겨주고 싶은 마음이 생기는 것이 인지상정이니까요. 이 사소한 일기장 같은 메모들이 여러분의 안전하고 품격 있는 서울의 밤을 만드는 데 작은 도움이 되었으면 합니다.
+            </p>
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3>서울 야간 가이드</h3>
+                    <p>초행자를 위한 서울 밤문화 및 야간 엔터테인먼트 투명 비교 안내 블로그</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://clipdesk.shop/">홈</a>
+                    <a href="https://clipdesk.shop/intro">업종 소개</a>
+                    <a href="https://clipdesk.shop/guide">이용 가이드</a>
+                    <a href="https://clipdesk.shop/memo">메모</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>본 블로그는 서울의 다양한 야간 업종에 대한 정보 제공 및 올바른 이용 기준을 제시하기 위해 운영되는 독립적인 정보성 공간입니다. 제공되는 정보는 작성일 기준의 일반적인 업계 경향을 반영하며, 특정 업소의 광고나 홍보를 목적으로 하지 않습니다. 안전하고 건전한 사교 문화를 지향합니다.</p>
+                <p style="margin-top: 1rem;">&copy; 서울 야간 가이드. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
